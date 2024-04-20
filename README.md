@@ -23,4 +23,4 @@ Tips for optimizing code for readability and performance.
 ## How to Use
 Feel free to explore the sections based on your interests or requirements. If you have any questions, suggestions, or if you'd like to discuss any particular topic, don't hesitate to reach out.
 
-Connect with me on LinkedIn :- (Uday Kiran)[https://www.linkedin.com/in/uday-kiran-p-9b7b98216/]
+Connect with me on LinkedIn :- (Uday Kiran)[https://www.linkedin.com/in/udaykiranpadhy]
