@@ -97,3 +97,68 @@ if __name__ == '__main__':
     pizza = Paneer(pizza)
     print(pizza.get_cost())
     print(pizza.get_description())
+
+
+
+"""
+Example 2
+
+"""
+
+from abc import ABC, abstractmethod
+
+# The Component Interface
+class Coffee(ABC):
+    @abstractmethod
+    def cost(self):
+        pass
+
+    @abstractmethod
+    def description(self):
+        pass
+
+
+# The Concrete Component
+class SimpleCoffee(Coffee):
+    def cost(self):
+        return 50
+
+    def description(self):
+        return "Simple Coffee"
+
+
+# The Decorator Base Class
+class CoffeeDecorator(Coffee):
+    def __init__(self, coffee: Coffee):
+        self._coffee = coffee
+
+    def cost(self):
+        return self._coffee.cost()
+
+    def description(self):
+        return self._coffee.description()
+
+
+# Concrete Decorators
+class MilkDecorator(CoffeeDecorator):
+    def cost(self):
+        return self._coffee.cost() + 20
+
+    def description(self):
+        return self._coffee.description() + ", Milk"
+
+
+class SugarDecorator(CoffeeDecorator):
+    def cost(self):
+        return self._coffee.cost() + 10
+
+    def description(self):
+        return self._coffee.description() + ", Sugar"
+
+
+class WhippedCreamDecorator(CoffeeDecorator):
+    def cost(self):
+        return self._coffee.cost() + 30
+
+    def description(self):
+        return self._coffee.description() + ", Whipped Cream"
