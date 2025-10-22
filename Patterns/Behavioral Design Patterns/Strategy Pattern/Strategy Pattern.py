@@ -7,6 +7,16 @@ In Strategy pattern, we create objects which represent various strategies and a
 context object whose behavior varies as per its strategy object.
 The strategy object changes the executing algorithm of the context object.
 
+Instead of hardcoding which algorithm to use, you pick the right “strategy” dynamically.
+
+
+Context
+   └── uses → Strategy (interface)
+                 ├── ConcreteStrategyA
+                 ├── ConcreteStrategyB
+                 └── ConcreteStrategyC
+
+
 """
 from abc import ABC, abstractmethod
 
